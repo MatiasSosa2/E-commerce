@@ -1,0 +1,110 @@
+.contenedor-lista {
+  background: linear-gradient(135deg, #1C1C1C 0%, #2E2E2E 25%, #3E2723 50%, #2E2E2E 75%, #1C1C1C 100%);
+  min-height: calc(100vh - 80px);
+  padding: 2rem 0;
+  color: #FFD700;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor-lista::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(93, 64, 55, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(62, 39, 35, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(78, 52, 46, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.titulo-saludo {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.8);
+  letter-spacing: 3px;
+  color: #D7CCC8;
+  text-transform: uppercase;
+}
+
+.mensaje-saludo {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  color: #BCAAA4;
+}
+
+.proximamente {
+  background: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  border: 3px solid #8D6E63;
+  box-shadow: 
+    0 0 30px rgba(93, 64, 55, 0.2),
+    inset 0 0 20px rgba(62, 39, 35, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.contenido-placeholder h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #FFD700;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contenido-placeholder p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #A1887F;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.contenido-placeholder p:last-child {
+  margin-bottom: 0;
+  font-weight: 800;
+  color: #D7CCC8;
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .titulo-saludo {
+    font-size: 2rem;
+  }
+  
+  .mensaje-saludo {
+    font-size: 1rem;
+  }
+  
+  .proximamente {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .contenido-placeholder h3 {
+    font-size: 1.5rem;
+  }
+}
